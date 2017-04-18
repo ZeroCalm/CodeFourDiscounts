@@ -1,0 +1,17 @@
+<h1>List of Locations</h1>
+
+
+
+<div class="container">
+  <ul>
+    <% @locations.each do |l| %>
+      <hr>
+      <li>Name: <%= @location_name %></li><br>
+      <li>Address: <%= @location_address %></li><br>
+      <li>Description: <%= @location_description %></li><br>
+      <li>Latitude: <%= @lat %></li><br>
+      <li>Longitude: <%= @lng %></li><br>
+        <% end %>
+  </ul>
+  <hr>
+</div>
