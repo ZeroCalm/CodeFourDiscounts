@@ -18,7 +18,7 @@ locations = [
   ]
 
 users = [
-  {user_name:"Joe", job_function:"EMT", email:"w@k", password:"password"}
+  {user_name:"Joe", job_function:"EMT", email:"admin@admin.com", password:"asdfjkl", admin: true}
   ]
 
 
