@@ -5,4 +5,10 @@ class HomesController < ApplicationController
         redirect_to locations_path
     end
   end
+
+  def map
+  end
+
+  def mapAdd
+  end  
 end
