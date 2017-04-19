@@ -1,90 +1,75 @@
 class LocationsController < ApplicationController
 
-  def index
-      @locations = Location.all
-  end
+      def index
+          @locations = Location.all
+      end
 
-  def new
-    @location = Location.new
-    # remember the default behavior is to render :new
-  end
+      def new
+        @location = Location.new
+      end
 
-  def show
-    # get the creature id from the url params
-    location_id = params[:id]
-
-    # use `creature_id` to find the creature in the database
-    # and save it to an instance variable
-    @location = Location.find_by_id(location_id)
-
-    # render the show view (it has access to instance variable)
-    # remember the default behavior is to render :show
-  end
+      def show
+        location_id = params[:id]
+        @location = Location.find_by_id(location_id)
+      end
 
 
 
-  def create
-  # whitelist params and save them to a variable
-  location_params = params.require(:location).permit(:location_name, :location_address, :location_description, :lat, :lng)
+      def create
+      # whitelist params and save them to a variable
+      location_params = params.require(:location).permit(:location_name, :location_address, :location_description, :lat, :lng)
 
-  # create a new creature from `creature_params`
-  location = Location.new(location_params)
+      # create a new location from `location_params`
+      location = Location.new(location_params)
 
-  # if location saves, redirect to route that displays
-  # ONLY the newly created location
-  if location.save
-    redirect_to location_path(location)
-    # redirect_to location_path(creature) is equivalent to:
-    # redirect_to "/locations/#{location.id}"
-  end
-end
+      # if location saves, redirect to route that displays
+      # ONLY the newly created location
+      if location.save
+        redirect_to location_path(location)
+        # redirect_to location_path(location) is equivalent to:
+        # redirect_to "/locations/#{location.id}"
+      end
+    end
 
-def edit
-  # get the creature id from the url params
-  location_id = params[:id]
+    def edit
+      # get the location id from the url params
+      location_id = params[:id]
+      @location = Location.find_by_id(location_id)
+    end
 
-  # use `creature_id` to find the creature in the database
-  # and save it to an instance variable
-  @location = Location.find_by_id(location_id)
+    def update
+        # get the location id from the url params
+        location_id = params[:id]
 
-  # render the edit view (it has access to instance variable)
-  # remember the default behavior is to render :edit
-end
+        # use `location_id` to find the location in the database
+        location = Location.find_by_id(location_id)
 
-def update
-    # get the creature id from the url params
-    location_id = params[:id]
+        # whitelist params and save them to a variable
+        location_params = params.require(:location).permit(:location_name, :location_address, :location_description, :lat, :lng)
 
-    # use `creature_id` to find the creature in the database
-    location = Location.find_by_id(location_id)
+        # update the location
+        location.update_attributes(location_params)
 
-    # whitelist params and save them to a variable
-    location_params = params.require(:location).permit(:location_name, :location_address, :location_description, :lat, :lng)
+        # redirect to show page for the updated location
+        redirect_to location_path(location)
+        # redirect_to location_path(location) is equivalent to:
+        # redirect_to "/locations/#{location.id}"
+      end
 
-    # update the creature
-    location.update_attributes(location_params)
+      def destroy
+      # get the location id from the url params
+      location_id = params[:id]
 
-    # redirect to show page for the updated creature
-    redirect_to location_path(location)
-    # redirect_to creature_path(creature) is equivalent to:
-    # redirect_to "/creatures/#{creature.id}"
-  end
+      # use `location_id` to find the location in the database
+      # and save it to an instance variable
+      location = Location.find_by_id(location_id)
 
-  def destroy
-  # get the creature id from the url params
-  location_id = params[:id]
+      # destroy the location
+      location.destroy
 
-  # use `creature_id` to find the creature in the database
-  # and save it to an instance variable
-  location = Location.find_by_id(location_id)
-
-  # destroy the creature
-  location.destroy
-
-  # redirect to creatures index
-  redirect_to locations_path
-  # redirect_to creatures_path is equivalent to:
-  # redirect_to "/creatures"
-end
-
+      # redirect to locations index
+      redirect_to locations_path
+      # redirect_to locations_path is equivalent to:
+      # redirect_to "/locations"
+    end
 end

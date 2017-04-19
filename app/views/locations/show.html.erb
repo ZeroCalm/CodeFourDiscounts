@@ -9,5 +9,8 @@
 <%= @location.lng %>
 
 
+<span><%= link_to "Edit Location", edit_location_path(@location.id) %></span>
 
-<%= button_to "Delete", @location, method: :delete %>
+<%= button_to " Delete Location ", {action:"destroy", id: @location.id}, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<%= button_to "All Locations", locations_path, method: :get %>
