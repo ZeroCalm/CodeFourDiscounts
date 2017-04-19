@@ -62,6 +62,7 @@ GEM
     ffi (1.9.18)
     font-awesome-rails (4.7.0.1)
       railties (>= 3.2, < 5.1)
+    geocoder (1.4.3)
     globalid (0.4.0)
       activesupport (>= 4.2.0)
     haml (4.0.7)
@@ -196,6 +197,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.2)
   devise
+  geocoder
   jbuilder (~> 2.5)
   jquery-rails
   listen (~> 3.0.5)

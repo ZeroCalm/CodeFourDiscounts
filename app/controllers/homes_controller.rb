@@ -7,8 +7,10 @@ class HomesController < ApplicationController
   end
 
   def map
+    @locations = Location.all
   end
 
   def mapAdd
-  end  
+    @locations = Location.all
+  end
 end

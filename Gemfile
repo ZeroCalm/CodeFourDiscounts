@@ -21,7 +21,11 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Geocodes by Address
+gem 'geocoder'
+# Rails_Admin provide Admin Console
 gem 'rails_admin', '~> 1.1.1'
+# Authorization by Devise Gem
 gem 'devise'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
