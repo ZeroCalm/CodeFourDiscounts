@@ -9,8 +9,10 @@ class HomesController < ApplicationController
   end
 
   def map
+    @locations = Location.all
   end
 
   def mapAdd
+    @locations = Location.all
   end
 end

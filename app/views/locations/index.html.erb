@@ -3,6 +3,7 @@
 
 
 <div class="container">
+  <%= link_to "New Location", new_location_path %> 
   <ul>
     <% @locations.each do |location| %>
       <hr>
@@ -16,6 +17,6 @@
         <% end %>
   </ul>
   <hr>
-  
+
 
 </div>
