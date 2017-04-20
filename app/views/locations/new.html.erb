@@ -1,7 +1,7 @@
 <%= form_for @location do |f| %>
-  <%= f.text_field :location_name %>
-  <%= f.text_field :location_description %>
-  <%= f.text_field :location_address %>
+  Name of the Location: <%= f.text_field :location_name %>
+  Description/Discount Offered: <%= f.text_field :location_description %>
+  Street Address: <%= f.text_field :location_address %>
   <%= f.text_field :lat %>
   <%= f.text_field :lng %>
   <%= f.submit "Create New Location" %>
