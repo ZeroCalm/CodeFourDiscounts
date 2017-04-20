@@ -5,9 +5,10 @@ Rails.application.routes.draw do
 
   get '/locations', to: 'locations#index', as: 'locations'
   get "/locations/new", to: "locations#new", as: "new_location"
-  get '/homes/map', to: "homes#map", as: "map"
+
   get '/homes/mapAdd', to: "homes#mapAdd", as: 'mapAdd'
 
+  get '/locations/map', to: "locations#map", as: "map"
   post '/locations', to: 'locations#create'
   get "/locations/:id", to: "locations#show", as: "location"
   get "/locations/:id/edit", to: "locations#edit", as: "edit_location"
