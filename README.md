@@ -1,24 +1,31 @@
-# README
+********README STILL IN PROGRESS*********
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Purpose:
+  This app was created the EMT and Pararamedic in mind.  I figured, ya gotta eat sometime (and chances are you're not rich).  But you can always count on a good portion of the public to have our backs!  
 
-* Ruby version
+        DISCOUNTS!!!!!!
 
-* System dependencies
+  Yes, This app will show you locations on a Google Map, that will not only provide location information, but location information that has been provided by your very own peers.
 
-* Configuration
 
-* Database creation
+Instructions:
 
-* Database initialization
+git clone https://github.com/ZeroCalm/CodeFourDiscounts.git.
 
-* How to run the test suite
+bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+Gems Used:
+Devise
+Geocoder
+Rails_admin  '~> 1.1.1'
 
-* Deployment instructions
+If you want to use the admin feature, you will need to run
+   rails g rails_admin:install
 
-* ...
+*************************
+TODO:
+
+delete admin attribute on creation.
+
+create articles/posts for each location

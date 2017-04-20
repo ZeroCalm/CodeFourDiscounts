@@ -12,11 +12,39 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <% if current_user %>
+
+    <div class="log">
+      <% if current_user %>
       <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= link_to "Login", new_user_session_path %>
+      <% else %>
+      <%= button_to "Login", new_user_session_path %>
     <% end %>
+    </div>
+
+
+
+      <%= link_to "Admin", rails_admin_path %>
+
+
+
+
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li>
+      <a href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li><%= link_to "Heres a List All Locations", locations_path, method: :get %></li>
+    <li><%= link_to "Add A Location", new_location_path %></a></li>
+    <li><%= link_to "Checkout The MAP!!!", map_path %></a></li>
+    <li>
+      <a href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
 
   <%= yield %>
   </body>
