@@ -14,3 +14,20 @@
  *= require_tree .
  *= require_self
  */
+
+/*.header{
+  background-color: blue;
+   a{
+     color: black;
+   }
+
+}
+
+
+ .options{
+   line-spacing: 2em;
+ }
+
+.log{
+  text-align: right;
+}*/
