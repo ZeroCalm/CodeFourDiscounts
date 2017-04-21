@@ -42,7 +42,7 @@ class ArticlesController < ApplicationController
 
     def destroy
       @article = Article.destroy(params[:id])
-      redirect_to user_path(current_user)
+      redirect_to locations_path(current_user)
     end
 
     private

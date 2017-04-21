@@ -3,7 +3,7 @@
 
 
 <div class="container">
-  <%= link_to "New Location", new_location_path %> 
+  <%= link_to "New Location", new_location_path %>
   <ul>
     <% @locations.each do |location| %>
       <hr>
@@ -14,6 +14,8 @@
       <li>Longitude: <%= "#{location.lng}" %></li><br>
 
       <span><%= link_to "Edit Location", edit_location_path("#{location.id}") %></span>
+      <span class="new-article"><%= link_to "New article", new_article_path("#{location.id}") %></span>
+
         <% end %>
   </ul>
   <hr>

@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 Location.destroy_all
+Article.destroy_all
 
 locations = [
   {location_name:"Ikes Sandwiches", location_address: "2172 Shattuck Ave, Berkeley, CA", location_description: "We Sell Sandiwiches", lat: 37.869849, lng: -122.268379},
@@ -22,6 +23,10 @@ users = [
 
   ]
 
+articles = [
+  {user_id: 40, location_id: 18, title: "THIS IS THE TITLE", body: "And this would be the body"}
+]
 
 User.create(users)
 Location.create(locations)
+Article.create(articles)
