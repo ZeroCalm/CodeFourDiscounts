@@ -13,6 +13,7 @@
           <li>Latitude: <%= "#{location.lat}" %></li><br>
           <li>Longitude: <%= "#{location.lng}" %></li><br>
 
+          <span><%= link_to "View Comments on this location", location_path("#{location.id}") %></span>
           <span><%= link_to "Edit Location", edit_location_path("#{location.id}") %></span>
           <span class="new-article"><%= link_to "New article", new_article_path("#{location.id}") %></span>
 
