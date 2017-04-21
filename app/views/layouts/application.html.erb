@@ -1,51 +1,38 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CodeFourApp</title>
+    <title>Code Four Discounts</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+ <div class="header container-fluid">
+    <header>
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
 
+        <%= link_to "Admin", rails_admin_path %>
 
-    <div class="log">
-      <% if current_user %>
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-      <% else %>
-      <%= button_to "Login", new_user_session_path %>
-    <% end %>
-    </div>
+        <div class="log">
+          <% if current_user %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+          <% else %>
+          <%= button_to "Login", new_user_session_path %>
+        <% end %>
+        </div>
 
-
-
-      <%= link_to "Admin", rails_admin_path %>
-
-
-
-
-<nav aria-label="Page navigation">
-  <ul class="pagination">
-    <li>
-      <a href="#" aria-label="Previous">
-        <span aria-hidden="true">&laquo;</span>
-      </a>
-    </li>
-    <li><%= link_to "Heres a List All Locations", locations_path, method: :get %></li>
-    <li><%= link_to "Add A Location", new_location_path %></a></li>
-    <li><%= link_to "Checkout The MAP!!!", map_path %></a></li>
-    <li>
-      <a href="#" aria-label="Next">
-        <span aria-hidden="true">&raquo;</span>
-      </a>
-    </li>
-  </ul>
-</nav>
-
+        <ul class="pagination menu">
+          <li><%= link_to "Heres a List All Locations", locations_path, method: :get %></li>
+          <li><%= link_to "Add A Location", new_location_path %></a></li>
+          <li><%= link_to "Checkout The MAP!!!", map_path %></a></li>
+        </ul>
+    </header>
+</div>
   <%= yield %>
   </body>
 </html>
