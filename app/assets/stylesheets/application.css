@@ -16,6 +16,16 @@
  */
 
 
+ #map{
+
+   width: 100%;
+ }
+
+.list{
+  margin: 5% auto;
+    width:80%
+}
+
 .log{
   text-align: right;
   color: white;
@@ -33,6 +43,4 @@ text-align: center;
   background-color: blue;
   font-size: 1.2em;
   background: url('Ambulance_front.jpg');
-
-
 }

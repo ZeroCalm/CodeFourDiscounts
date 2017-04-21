@@ -1,24 +1,23 @@
-<h1>List of Locations</h1>
+<div class="container-fluid locations">
 
 
+    <h1>List of Locations</h1>
 
-<div class="container">
-  <%= link_to "New Location", new_location_path %>
-  <ul>
-    <% @locations.each do |location| %>
+    <div class="container">
+      <ul class = "locationIndex list">
+        <% @locations.each do |location| %>
+          <hr>
+          <li>Name: <%= "#{location.location_name}" %></li><br>
+          <li>Address: <%= "#{location.location_address}" %></li><br>
+          <li>Description: <%= "#{location.location_description}" %></li><br>
+          <li>Latitude: <%= "#{location.lat}" %></li><br>
+          <li>Longitude: <%= "#{location.lng}" %></li><br>
+
+          <span><%= link_to "Edit Location", edit_location_path("#{location.id}") %></span>
+          <span class="new-article"><%= link_to "New article", new_article_path("#{location.id}") %></span>
+
+            <% end %>
+      </ul>
       <hr>
-      <li>Name: <%= "#{location.location_name}" %></li><br>
-      <li>Address: <%= "#{location.location_address}" %></li><br>
-      <li>Description: <%= "#{location.location_description}" %></li><br>
-      <li>Latitude: <%= "#{location.lat}" %></li><br>
-      <li>Longitude: <%= "#{location.lng}" %></li><br>
-
-      <span><%= link_to "Edit Location", edit_location_path("#{location.id}") %></span>
-      <span class="new-article"><%= link_to "New article", new_article_path("#{location.id}") %></span>
-
-        <% end %>
-  </ul>
-  <hr>
-
-
-</div>
+    </div>
+  </div>
