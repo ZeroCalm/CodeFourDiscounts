@@ -1,12 +1,10 @@
-<%= @location.location_name %>
-<hr />
-<%= @location.location_address %>
-<hr>
-<%= @location.location_description %>
-<hr>
-<%= @location.lat %>
-<hr>
-<%= @location.lng %>
+<div>
+    <% @location.articles.reverse_each do |article| %>
+      <hr>
+      <li>Title: <%= link_to article.title, article_path(article) %></li><br>
+      <li>Content: <%= article.body.truncate(25, separator: /\s/) %></li><br>
+    <% end %>
+    <span class="new-article"><%= link_to "New article", new_article_path(@location.id) %></span>
 
 
 <span><%= link_to "Edit Location", edit_location_path(@location.id) %></span>
