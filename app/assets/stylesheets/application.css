@@ -14,3 +14,25 @@
  *= require_tree .
  *= require_self
  */
+
+
+.log{
+  text-align: right;
+  color: white;
+  font-size: 1.2em;
+  color: black;
+
+}
+
+.menu {
+text-align: center;
+}
+
+.header{
+  color: black;
+  background-color: blue;
+  font-size: 1.2em;
+  background: url('Ambulance_front.jpg');
+
+
+}
