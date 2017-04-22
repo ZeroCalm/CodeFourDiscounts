@@ -10,23 +10,25 @@ Location.destroy_all
 Article.destroy_all
 
 locations = [
-  {location_name:"Ikes Sandwiches", location_address: "2172 Shattuck Ave, Berkeley, CA", location_description: "We Sell Sandiwiches", lat: 37.869849, lng: -122.268379},
-  # {location_name:"Oakland", location_address: "asdfsdf", location_description: "This wilasdfsdfl be a description", lat: 37.8044444, lng: -122.2697222},
-  # {location_name:"Emeryville", location_address: "adf", location_description: "This will basdfsdption", lat: 37.831318, lng: -122.285248},
-  # {location_name:"Burger King", location_address: "1 Happy Street", location_description: "Thasdfon", lat: 37.8716667, lng:  -122.2716667}
+  {location_name:"Ike's Sandwiches", location_address: "2172 Shattuck Ave, Berkeley, CA", location_description: "25% of Sandwiches", lat: 37.869849, lng: -122.268379},
+  {location_name:"Chipotle", location_address: "8460 Edgewater Dr, Oakland, CA", location_description: "20% off Meals", lat: 37.737934, lng: -122.197464},
+  {location_name:"Hawaiin BBQ", location_address: "25175 Sanata Clara St. #B Hayward, CA", location_description: "15% off Meals", lat: 37.648331, lng: -122.0899},
+  {location_name:"Kingston 11", location_address: "2270 Telegraph Ave. Oakland", location_description: "10% off Special", lat: 37.81229, lng:  -122.26858}
 
 
   ]
 
 users = [
-  {user_name:"Joe", job_function:"EMT", email:"admin@admin.com", password:"asdfjkl", admin: true}
+  {user_name:"Joe", job_function:"EMT", email:"admin@admin.com", password:"password", admin: true},
+  {user_name:"Tom", job_function:"Paramedic", email:"a@b.com", password:"password", admin: false},
+  {user_name:"Joe", job_function:"EMT", email:"t@a.com", password:"password", admin: false}
+
 
   ]
 
-articles = [
-  {user_id: 40, location_id: 18, title: "THIS IS THE TITLE", body: "And this would be the body"}
-]
+# articles = [
+#   {user_id: 40, location_id: 18, title: "THIS IS THE TITLE", body: "And this would be the body"}
+# ]
 
 User.create(users)
 Location.create(locations)
-Article.create(articles)
