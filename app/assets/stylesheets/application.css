@@ -22,13 +22,16 @@
  }
 
 .list{
-  margin: 5% auto;
-    width: 80%
+  margin: 0 auto;
+  width: 40%
+  display: inline;
+  line-height: normal;
 }
 
 .menuItem{
   font-size: 1.5em;
   margin:  4%;
+  font-size: 1.9em;
 }
 
 .log{
