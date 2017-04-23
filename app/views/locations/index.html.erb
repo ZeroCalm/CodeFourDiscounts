@@ -11,11 +11,12 @@
           <li class="list-group-item justify-content-between">Address: <%= "#{location.location_address}" %></li>
           <li class="list-group-item justify-content-between">Description: <%= "#{location.location_description}" %></li>
     </div>
-          <span class="menuItem"><%= link_to "View Comments on this location", location_path("#{location.id}") %></span>
-          <span class="menuItem"><%= link_to "Edit Location", edit_location_path("#{location.id}") %></span>
-          <span class="menuItem"> <%= link_to "New article", new_article_path("#{location.id}") %></span>
-
-            <% end %>
+    <div class="btn-group">
+          <button type="button" class="btn btn-outline-success"><%= link_to "View Comments on this location", location_path("#{location.id}") %></button>
+          <button type="button" class="btn btn-outline-success"><%= link_to "Edit Location", edit_location_path("#{location.id}") %></button>
+          <button type="button" class="btn btn-outline-success"><%= link_to "New article", new_article_path("#{location.id}") %></button>
+    </div>
+        <% end %>
 
       <hr>
     </ul>
