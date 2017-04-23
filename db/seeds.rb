@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all
 Location.destroy_all
+#Just to ensure any articles created are destoyed also
 Article.destroy_all
 
 locations = [
@@ -21,7 +22,8 @@ locations = [
 users = [
   {user_name:"Joe", job_function:"EMT", email:"admin@admin.com", password:"password", admin: true},
   {user_name:"Tom", job_function:"Paramedic", email:"a@b.com", password:"password", admin: false},
-  {user_name:"Joe", job_function:"EMT", email:"t@a.com", password:"password", admin: false}
+  {user_name:"Frank", job_function:"EMT", email:"a@c.com", password:"password", admin: false}
+  {user_name:"Marcus", job_function:"EMT", email:"a@d.com", password:"password", admin: false}
 
 
   ]

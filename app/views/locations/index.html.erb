@@ -4,15 +4,13 @@
     <h1>List of Locations</h1>
 
     <div class="container">
-      <div class = "list">
+      <ul class="list-group">
         <% @locations.each do |location| %>
           <hr>
-          <h2>Name: <%= "#{location.location_name}" %></li></h2><br>
-          <h3>Address: <%= "#{location.location_address}" %></li></h3><br>
-          <h3>Description: <%= "#{location.location_description}" %></h3><br>
-          <li>Latitude: <%= "#{location.lat}" %></li><br>
-          <li>Longitude: <%= "#{location.lng}" %></li><br>
-        </div>
+          <li class="list-group-item justify-content-between center">Name: <%= "#{location.location_name}" %></li>
+          <li class="list-group-item justify-content-between">Address: <%= "#{location.location_address}" %></li>
+          <li class="list-group-item justify-content-between">Description: <%= "#{location.location_description}" %></li>
+    </div>
           <span class="menuItem"><%= link_to "View Comments on this location", location_path("#{location.id}") %></span>
           <span class="menuItem"><%= link_to "Edit Location", edit_location_path("#{location.id}") %></span>
           <span class="menuItem"> <%= link_to "New article", new_article_path("#{location.id}") %></span>
@@ -20,5 +18,5 @@
             <% end %>
 
       <hr>
-    </div>
+    </ul>
   </div>
