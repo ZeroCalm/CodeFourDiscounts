@@ -16,7 +16,16 @@
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 
-        <%= link_to "Admin", rails_admin_path %>
+
+
+
+
+          <% if current_user && current_user.email == 'admin@admin.com' %>
+                  <%= link_to "Admin", rails_admin_path %>
+
+                 <% end  %>
+
+
 
         <div class="log">
           <% if current_user %>

@@ -8,17 +8,22 @@
 
 </div>
 
-<form class="form-inline">
-  <%= form_for @location do |f| %>
-  <div class="form-group">
-    <label>  Name of the Location: <%= f.text_field :location_name %></label>
-  </div>
-  <div class="form-group">
-    <label>Description/Discount Offered: <%= f.text_field :location_description %></label>
-  </div>
-  <div class="form-group">
-    <label>Street Address: <%= f.text_field :location_address %></label>
-  </div>
-  <%= f.submit "Create New Location" %>
-</form>
-    <% end %>
+    <row>
+        <form class="form-inline">
+              <%= form_for @location do |f| %>
+              <div class="form-group col-sm">
+                <label>  Name of the Location: <%= f.text_field :location_name %></label>
+              </div>
+              <div class="form-group col-sm">
+                <label>Description/Discount Offered: <%= f.text_field :location_description %></label>
+              </div>
+              <div class="form-group col-sm">
+                <label>Street Address: <%= f.text_field :location_address %></label>
+              </div>
+              <%= f.submit "Create New Location" %>
+            </form>
+            </row>
+      </row>
+        <% end %>
+
+<div class="col-sm">
