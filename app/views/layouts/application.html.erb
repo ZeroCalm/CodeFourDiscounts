@@ -35,13 +35,19 @@
         <% end %>
         </div>
 
+ <% if current_user %>
+
         <ul class="pagination menu">
+            <% if current_user %>
           <li><%= link_to "Heres a List All Locations", locations_path, method: :get %></li>
           <li><%= link_to "Add A Location", new_location_path %></a></li>
           <li><%= link_to "Checkout The MAP!!!", map_path %></a></li>
           <li><%= link_to "Edit My Profile", edit_user_registration_path %></a></li>
           <li><%= link_to "View My Articles", user_articles_path %></a></li>
+            <% end %>
+
         </ul>
+ <% end %>
     </header>
 </div>
   <%= yield %>

@@ -20,7 +20,6 @@ class LocationsController < ApplicationController
     end
 
     def create
-    location_params = params.require(:location).permit(:location_name, :location_address, :location_description, :lat, :lng)
     location = Location.new(location_params)
         if location.save
           redirect_to location_path(location)
@@ -44,5 +43,11 @@ class LocationsController < ApplicationController
     location = Location.find_by_id(location_id)
     location.destroy
     redirect_to locations_path
+  end
+
+  private
+
+  def location_params
+    params.require(:location).permit(:location_name, :location_address, :location_description, :lat, :lng)
   end
 end

@@ -43,12 +43,28 @@
 }
 
 .menu {
-text-align: center;
+  text-align: center;
 }
 
 .header{
   color: black;
   background-color: ;
   font-size: 1.2em;
-  background: url('Ambulance_front.jpg');
+}
+
+body{
+    background: url('background.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.indexpage{
+  margin: auto;
+      width: 50%;
+      border: 3px solid green;
+      padding: 10px;
+}
+.map{
+  width: 100%;
 }
