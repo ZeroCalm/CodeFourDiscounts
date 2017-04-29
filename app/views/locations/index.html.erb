@@ -1,6 +1,13 @@
 <div class="container-fluid locations">
     <h1>List of Locations</h1>
 
+    <%= form_tag(locations_path, method: :get) do %>
+    <%= text_field_tag :term %>
+    <%= submit_tag 'Search' %>
+    <% end %>
+
+
+    
         <div class="container">
             <% @locations.each do |location| %>
                 <ul class="list-group">
