@@ -1,24 +1,19 @@
 <div class="container-fluid locations">
-
-
     <h1>List of Locations</h1>
 
-    <div class="container indexpage">
-      <ul class="list-group">
-        <% @locations.each do |location| %>
-          <hr>
-          <li class="list-group-item justify-content-between">Name: <%= "#{location.location_name}" %></li>
-          <li class="list-group-item justify-content-between">Address: <%= "#{location.location_address}" %></li>
-          <li class="list-group-item justify-content-between">Description: <%= "#{location.location_description}" %></li>
+        <div class="container">
+            <% @locations.each do |location| %>
+                <ul class="list-group">
+                  <li class="list-group-item justify-content-between">Name: <%= "#{location.location_name}" %></li>
+                  <li class="list-group-item justify-content-between">Address: <%= "#{location.location_address}" %></li>
+                  <li class="list-group-item justify-content-between">Discount Offered: <%= "#{location.location_description}" %></li>
 
-    <span class="btn-group buttons">
-          <button type="button" class="btn btn-outline-success"><%= link_to "View Comments on this location", location_path("#{location.id}") %></button>
-          <button type="button" class="btn btn-outline-success"><%= link_to "Edit Location", edit_location_path("#{location.id}") %></button>
-          <button type="button" class="btn btn-outline-success"><%= link_to "New article", new_article_path("#{location.id}") %></button>
-    </span>
+                      <span class="btn-group buttons">
+                            <button type="button" class="btn btn-outline-success"><%= link_to "View Comments on this location", location_path("#{location.id}") %></button>
+                            <button type="button" class="btn btn-outline-success"><%= link_to "Edit Location", edit_location_path("#{location.id}") %></button>
+                            <button type="button" class="btn btn-outline-success"><%= link_to "New article", new_article_path("#{location.id}") %></button>
+                      </span>
+                </ul>
+          </div>
+            <% end %>
       </div>
-        <% end %>
-
-      <hr>
-    </ul>
-  </div>
