@@ -14,12 +14,13 @@
   </head>
 
   <body>
- <div class="header container-fluid">
+ <div class="header container">
     <header>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 
-
+<!-- FaceBook Login Button -->
+<%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
 
 
         <span class="admin">
