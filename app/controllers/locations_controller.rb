@@ -3,7 +3,11 @@ class LocationsController < ApplicationController
 
 
     def index
-      @locations = Location.all
+      @locations = if params[:term]
+      Location.where('location_name LIKE ?', "%#{params[:term]}%")
+      else
+        Location.all
+      end
     end
 
     def map
@@ -48,6 +52,6 @@ class LocationsController < ApplicationController
   private
 
   def location_params
-    params.require(:location).permit(:location_name, :location_address, :location_description, :lat, :lng)
+    params.require(:location).permit(:location_name, :location_address, :location_description, :lat, :lng, :term)
   end
 end
