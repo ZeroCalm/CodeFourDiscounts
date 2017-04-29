@@ -25,6 +25,8 @@ Instructions:
 4.  If you want to use the admin feature, you will need to run
    rails g rails_admin:install
 
+   --Once logged in as "admin"  a button leading to the Admin panel will show.
+
 
    SAMPLE LOGIN:
 

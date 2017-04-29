@@ -22,7 +22,7 @@ class LocationsController < ApplicationController
     def create
     location = Location.new(location_params)
         if location.save
-          redirect_to location_path(location)
+          redirect_to map_path
         end
     end
 

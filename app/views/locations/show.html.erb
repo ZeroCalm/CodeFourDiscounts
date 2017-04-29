@@ -4,11 +4,22 @@
       <li>Title: <%= link_to article.title, article_path(article) %></li><br>
       <li>Content: <%= article.body.truncate(25, separator: /\s/) %></li><br>
     <% end %>
-    <span class="new-article"><%= link_to "New article", new_article_path(@location.id) %></span>
 
 
-<span><%= link_to "Edit Location", edit_location_path(@location.id) %></span>
 
-<%= button_to " Delete Location ", {action:"destroy", id: @location.id}, method: :delete, data: { confirm: 'Are you sure?' } %>
-
-<%= button_to "All Locations", locations_path, method: :get %>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="col">
+        <%= link_to "New article", new_article_path(@location.id) %></span>
+      </div>
+      <div class="col">
+        <%= link_to "Edit Location", edit_location_path(@location.id) %>
+      </div>
+        <%= link_to "Delete Location", {action:"destroy", id: @location.id}, method: :delete, data: { confirm: 'Are you sure?' } %>
+      <div class="col">
+        <%= link_to "All Locations", locations_path, method: :get %>
+      </div>
+    </div>
+  </div>
+</div>
