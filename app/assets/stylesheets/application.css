@@ -20,70 +20,64 @@
    width: 100%;
    height: 400px;"
  }
-.admin{
-  color: black;
-  float: left;
-}
-.locales{
-  font-size: 1.2em;
-  border: none;
-  max-width: 50%;
-  background-color: rgba(0, 0, 0, 0.2);
-  color: darkblue;
-}
-.log{
-  float: right;
-  color: black;
-  font-size: 1.2em;
-  color: black;
-}
+ .admin{
+   color: black;
+   float: left;
+ }
 
-.mainMenu{
-  text-align: center;
-  widtgh: 40%;
-  margin: 5% 5% auto 5%;
-  color: black;
-}
+ .log{
+   float: right;
+   color: black;
+   font-size: 1.2em;
+   color: black;
+ }
 
-.list{
-  margin: 0 auto;
-  width: 40%
-  display: inline;
-  line-height: normal;
-}
+ .mainMenu{
+   text-align: center;
+   widtgh: 40%;
+   margin: 5% 5% auto 5%;
+   color: black;
+ }
 
-.menuItem{
-  font-size: 1.5em;
-  margin:  4%;
-  font-size: 1.9em;
-}
+ .list{
+   margin: 0 auto;
+   width: 40%
+   display: inline;
+   line-height: normal;
+ }
+
+ .menuItem{
+   font-size: 1.5em;
+   margin:  4%;
+   font-size: 1.9em;
+ }
 
 
-.menu {
-  text-align: center;
-}
+ .menu {
+   text-align: center;
+ }
 
-.header{
-  color: black;
-  background-color: ;
-  font-size: 1.2em;
-}
+ .header{
+   color: black;
+   background-color: ;
+   font-size: 1.2em;
+ }
 
-body{
-    background: url('background.jpg');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-}
+ body{
+   background: url('background.jpg');
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+   background-position: center;
+ }
 
-.indexpage{
-      margin: auto;
-      width: 50%;
-      border: 5px solid black;
-      padding: 10px;
-      font-size: 1.6em;
-      color: red;
-}
-.map{
-  width: 100%;
-}
+ .indexpage{
+   margin: auto;
+   width: 50%;
+   border: 5px solid black;
+   padding: 10px;
+   font-size: 1.6em;
+   color: red;
+ }
+ .map{
+   width: 100%;
+ }
