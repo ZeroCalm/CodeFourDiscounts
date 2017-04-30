@@ -24,7 +24,13 @@
   color: black;
   float: left;
 }
-
+.locales{
+  font-size: 1.2em;
+  border: none;
+  max-width: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: darkblue;
+}
 .log{
   float: right;
   color: black;

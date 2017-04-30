@@ -14,11 +14,10 @@
   </head>
 
   <body>
- <div class="header container-fluid">
+ <div class="header container">
     <header>
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
-
 
 
 
@@ -36,6 +35,8 @@
               <%= button_to "Login", new_user_session_path %>
           <% end %>
         </div>
+
+
 
  <% if current_user %>
         <ul class="pagination menu mainMenu">
