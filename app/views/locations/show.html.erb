@@ -2,6 +2,7 @@
     <% @location.articles.reverse_each do |article| %>
       <hr>
       <li>Title: <%= link_to article.title, article_path(article) %></li><br>
+      <li>By: <%= article.user.user_name %></li><br />
       <li>Content: <%= article.body.truncate(25, separator: /\s/) %></li><br>
     <% end %>
 
