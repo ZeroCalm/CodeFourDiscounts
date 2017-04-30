@@ -258,9 +258,6 @@ Devise.setup do |config|
   #   manager.default_strategies(scope: :user).unshift :some_external_strategy
   # end
 
-  config.omniauth :facebook, "424732444585876", "d853f46eca95dc5c871b481c78a75f7a",
-                  callback_url: "http://localhost:3000/locations"
-  # ==> Mountable engine configurations
   # When using Devise inside an engine, let's call it `MyEngine`, and this engine
   # is mountable, there are some extra configurations to be taken into account.
   # The following options are available, assuming the engine is mounted as:
@@ -273,4 +270,7 @@ Devise.setup do |config|
   # When using OmniAuth, Devise cannot automatically set OmniAuth path,
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
+  config.omniauth :facebook, "424732444585876", "d853f46eca95dc5c871b481c78a75f7a",
+  callback_url: "http://localhost:3000/users/auth/facebook/callback"
 end
+# ==> Mountable engine configurations

@@ -19,8 +19,6 @@
       <p class="notice"><%= notice %></p>
       <p class="alert"><%= alert %></p>
 
-<!-- FaceBook Login Button -->
-<%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
 
 
         <span class="admin">
@@ -37,6 +35,8 @@
               <%= button_to "Login", new_user_session_path %>
           <% end %>
         </div>
+
+
 
  <% if current_user %>
         <ul class="pagination menu mainMenu">
