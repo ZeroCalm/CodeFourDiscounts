@@ -1,56 +1,51 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Code Four Discounts</title>
-    <%= csrf_meta_tags %>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<head>
+  <title>Code Four Discounts</title>
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-    <!-- # Google Maps API Call -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPJc_P8-py71NS_I9vvIoGrXgOxGMWLew">
-    </script>
-  </head>
+  <!-- # Google Maps API Call -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPJc_P8-py71NS_I9vvIoGrXgOxGMWLew">
+  </script>
+</head>
 
-  <body>
- <div class="header container">
+<body>
+  <div class="header container">
     <header>
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
 
+      <!-- Flash helper from Semantic UI -->
+      <%= semantic_flash %>
 
+      <span class="admin">
+        <% if current_user && current_user.email == 'admin@admin.com' %>
+        <%= button_to "Admin", rails_admin_path %>
+        <% end %>
+      </span>
 
-        <span class="admin">
-          <% if current_user && current_user.email == 'admin@admin.com' %>
-              <%= button_to "Admin", rails_admin_path %>
-          <% end %>
-        </span>
+      <div class="log">
+        <% if current_user %>
+        <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+        <% else %>
+        <%= button_to "Login", new_user_session_path %>
+        <% end %>
+      </div>
 
+  <%= link_to "My Articles", user_articles_path %></a>
 
-        <div class="log">
-          <% if current_user %>
-              <%= button_to "Logout", destroy_user_session_path, method: :delete %>
-              <% else %>
-              <%= button_to "Login", new_user_session_path %>
-          <% end %>
-        </div>
-
-
-
- <% if current_user %>
-        <ul class="pagination menu mainMenu">
-          <% if current_user %>
-              <li><%= link_to "Heres a List All Locations", locations_path, method: :get %></li>
-              <li><%= link_to "Add A Location", new_location_path %></a></li>
-              <li><%= link_to "Checkout The MAP!!!", map_path %></a></li>
-              <li><%= link_to "Edit My Profile", edit_user_registration_path %></a></li>
-              <li><%= link_to "View My Articles", user_articles_path %></a></li>
-          <% end %>
-        </ul>
- <% end %>
+<!-- Following Menu -->
+<div class="ui large top fixed hidden menu">
+<div class="ui container">
+      <% if current_user %>
+        <%= link_to "Locations", locations_path, method: :get %>
+        <%= link_to "map", map_path %>
+        <%= link_to "Edit My Info", edit_user_registration_path %>
+      <% end %>
     </header>
-</div>
+  </div>
   <%= yield %>
-  </body>
+</body>
 </html>

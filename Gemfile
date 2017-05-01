@@ -21,6 +21,9 @@ gem 'coffee-rails', '~> 4.2'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
+# Semantic UI for styling
+gem 'semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git'
+#Facebook's Authentication
 gem 'omniauth-facebook'
 # Geocodes by Address
 gem 'geocoder'
