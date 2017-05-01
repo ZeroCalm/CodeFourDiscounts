@@ -1,26 +1,24 @@
 <div class="container-fluid locations">
-    <h1>List of Locations</h1>
-
     <%= form_tag(locations_path, method: :get) do %>
       <%= text_field_tag :term %>
       <%= submit_tag 'Search' %>
     <% end %>
 
-        <div class="container">
-            <% @locations.each do |location| %>
-                <ul class="list-group">
-                  <li class="list-group-item justify-content-between locales">Name: <%= "#{location.location_name}" %></li>
-                  <li class="list-group-item justify-content-between locales">Address: <%= "#{location.location_address}" %></li>
-                  <li class="list-group-item justify-content-between locales">Discount Offered: <%= "#{location.location_description}" %></li>
 
-                      <span class="btn-group buttons">
-                            <button type="button" class="btn btn-outline-success"><%= link_to "View Comments on this location", location_path("#{location.id}") %></button>
-                            <button type="button" class="btn btn-outline-success"><%= link_to "Edit Location", edit_location_path("#{location.id}") %></button>
-                            <button type="button" class="btn btn-outline-success"><%= link_to "New article", new_article_path("#{location.id}") %></button>
-                      </span>
-                </ul>
-          </div>
+    <% @locations.each do |location| %>
+        <ul class="list-group">
+          <li class="list-group-item justify-content-between locales">Name: <%= "#{location.location_name}" %></li>
+          <li class="list-group-item justify-content-between locales">Address: <%= "#{location.location_address}" %></li>
+          <li class="list-group-item justify-content-between locales">Discount Offered: <%= "#{location.location_description}" %></li>
+
+              <span class="btn-group buttons smallList">
+                    <button type="button" class="btn btn-outline-danger"><%= link_to "View Comments on this location", location_path("#{location.id}") %></button>
+                    <button type="button" class="btn btn-outline-danger"><%= link_to "Edit Location", edit_location_path("#{location.id}") %></button>
+                    <button type="button" class="btn btn-outline-danger"><%= link_to "New article", new_article_path("#{location.id}") %></button>
+              </span>
+        </ul>
+</div>
 
 
-            <% end %>
-      </div>
+    <% end %>
+</div>

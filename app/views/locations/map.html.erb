@@ -1,9 +1,8 @@
+  <%= link_to "New Location", new_location_path %>
 <div class ="container-fluid map">
+        <div id="map">
 
-
-
-
-        <div id="map" class="responsive center"></div>
+        </div>
 
         <script type="text/javascript">
 
@@ -26,11 +25,10 @@
 
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
               return function() {
-                infowindow.setContent(places[i].location_name + "   |   " + places[i].location_address  + places[i].location_description);
+                infowindow.setContent(places[i].location_name + "   |   " + places[i].location_address  + "     |       " + places[i].location_description);
                 infowindow.open(map, marker);
               }
             })(marker, i));
           }
         </script>
-
   </div>
