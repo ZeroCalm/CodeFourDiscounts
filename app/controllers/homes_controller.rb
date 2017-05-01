@@ -3,7 +3,7 @@ class HomesController < ApplicationController
 
   def index
     if current_user
-      redirect_to map_path
+      redirect_to splash_path
     end
   end
 end

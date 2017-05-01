@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   root 'homes#index'
   get '/locations', to: 'locations#index', as: 'locations'
   get '/locations/new', to: 'locations#new', as: 'new_location'
-  get '/locations/splash' to: 'locations#splash' as 'splash'
+  get '/locations/splash', to: 'locations#splash', as: 'splash'
     #  Location Routes
 
   get '/locations/map', to: 'locations#map', as: 'map'
