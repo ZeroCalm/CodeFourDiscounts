@@ -34,7 +34,9 @@
         <% end %>
       </div>
 
-  <%= link_to "My Articles", user_articles_path %></a>
+      <% if current_user %>
+      <%= link_to "My Articles", user_articles_path %></a>
+      <% end %>
 
 <!-- Following Menu -->
 <div class="ui large top fixed hidden menu">
