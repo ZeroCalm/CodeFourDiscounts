@@ -26,6 +26,11 @@ body{
   background-color: rgb(144, 154, 168);
 }
 
+#new_article, #new_user{
+  text-align: left;
+}
+
+
  .admin{
    color: black;
    float: left;

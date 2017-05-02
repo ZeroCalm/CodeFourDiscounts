@@ -1,12 +1,12 @@
 ********README STILL IN PROGRESS*********
 
 
-Purpose:
+<h2>Purpose:</h2>
   This app was created with the hungry EMT and Paramedic in mind.  I figured, ya gotta eat sometime (and chances are you're not rich).  But you can always count on a good portion of the public to have our backs!  
 
-    <center>    DISCOUNTS!!!!!!    </center>
 
-  Yes, This app will show you locations on a Google Map, that will not only provide location information, but location information that has been provided by your very own peers.
+<h2>Basic Idea </h2>
+  Users are able to log in with email and password.  They are able to add locations to the database with an actual street address or general area and that location will be saved to the shared google map.  Also the information located in the infowindow for each location contains the custom/user-generated data from the time of creation.
 
 
   General Information:
@@ -27,12 +27,12 @@ Instructions:
 
    --Once logged in as "admin"  a button leading to the Admin panel will show.
 
-
-   SAMPLE LOGIN:
+*****************************************
+   SAMPLE LOGIN: (once seed file has run)
 
    Admin Login:  admin@admin.com
    Password:     "password"
-
+--------------
    Non-Admin:
 
    Login:       a@b.com
@@ -42,9 +42,11 @@ Instructions:
 
 Gems Used:
 
-Devise
-Geocoder
-Rails_admin  '~> 1.1.1'
+Devise <br>
+Geocoder <br>
+Rails_admin  '~> 1.1.1' <br>
+Semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git' <br>
+Omniauth-facebook'<br>
 
 
 
@@ -53,8 +55,15 @@ TODO:
 
 Delete admin attribute on creation.
 
-Current Locations shows up on map
+Current Location shows up on map
 
 Directions are given from current location when requested by user on Map Page
 
-Separate address fields in Location Model, so that the Locations Index page can be sorted by city and/or other criteria.
+User will have the ability sort Index
+
+
+
+
+Challenges:
+
+My main challenge was accessing the User Views created by vise for styling.  Another day of reading or so and I"ll be good.
