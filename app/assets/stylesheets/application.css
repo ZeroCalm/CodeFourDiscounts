@@ -21,6 +21,7 @@
    width: 90%;
    height: 600px;"
  }
+
 body{
   background-color: rgb(144, 154, 168);
 }
@@ -47,6 +48,7 @@ body{
    widtgh: 40%;
    margin: 5% 5% auto 5%;
    color: black;
+
  }
 
  .list{
@@ -61,7 +63,6 @@ body{
    margin:  4%;
    font-size: 1.9em;
  }
-
 
  .menu {
    text-align: center;
