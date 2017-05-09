@@ -11,6 +11,9 @@
   <!-- # Google Maps API Call -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPJc_P8-py71NS_I9vvIoGrXgOxGMWLew">
   </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Aclonica" rel="stylesheet">
 </head>
 
 <body>
@@ -33,18 +36,19 @@
         <%= button_to "Login", new_user_session_path %>
         <% end %>
       </div>
-
-      <% if current_user %>
-      <%= link_to "My Articles", user_articles_path %></a>
-      <% end %>
+      <div class="mobileSlide">
+        <% if current_user %>
+        <%= link_to "My Articles", user_articles_path %></a>
+        <%= link_to "Edit My Info", edit_user_registration_path %>
+        <% end %>
+      </div>
 
 <!-- Following Menu -->
 <div class="ui large top fixed hidden menu">
 <div class="ui container">
       <% if current_user %>
         <%= link_to "Locations", locations_path, method: :get %>
-        <%= link_to "map", map_path %>
-        <%= link_to "Edit My Info", edit_user_registration_path %>
+        <%= link_to "Map", map_path %>
       <% end %>
     </header>
   </div>
