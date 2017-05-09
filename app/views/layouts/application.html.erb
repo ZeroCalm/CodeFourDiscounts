@@ -36,6 +36,7 @@
 
       <% if current_user %>
       <%= link_to "My Articles", user_articles_path %></a>
+      <%= link_to "Edit My Info", edit_user_registration_path %>
       <% end %>
 
 <!-- Following Menu -->
@@ -43,8 +44,7 @@
 <div class="ui container">
       <% if current_user %>
         <%= link_to "Locations", locations_path, method: :get %>
-        <%= link_to "map", map_path %>
-        <%= link_to "Edit My Info", edit_user_registration_path %>
+        <%= link_to "Map", map_path %>
       <% end %>
     </header>
   </div>
