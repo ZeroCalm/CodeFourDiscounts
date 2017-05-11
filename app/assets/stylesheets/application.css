@@ -29,6 +29,11 @@
    height: 600px;
  }
 
+ .intro{
+   text-align: center;
+   color: darkBlue;
+ }
+
 body{
   background-color: rgb(144, 154, 168);
 }
