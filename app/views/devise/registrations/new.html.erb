@@ -4,10 +4,22 @@
   <%= devise_error_messages! %>
 
   <div class="field">
+    <%= f.label :user_name %><br />
+    <%= f.text_field :user_name, autofocus: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :job_function %><br />
+
+    <%= f.radio_button(:job_function, "EMT") %>
+    <%= f.label(:users_job_function, "I am an EMT") %>
+
+  </div>
+
+  <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true %>
   </div>
-
   <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
