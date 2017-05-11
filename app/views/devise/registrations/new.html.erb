@@ -12,7 +12,13 @@
     <%= f.label :job_function %><br />
 
     <%= f.radio_button(:job_function, "EMT") %>
-    <%= f.label(:users_job_function, "I am an EMT") %>
+    <%= f.label(:users_job_function, "EMT") %>
+    <%= f.radio_button(:job_function, "Paramedic") %>
+    <%= f.label(:users_job_function, "Paramedic") %>
+    <%= f.radio_button(:job_function, "Fire") %>
+    <%= f.label(:users_job_function, "Fire") %>
+    <%= f.radio_button(:job_function, "Nursing") %>
+    <%= f.label(:users_job_function, "Nursing (CCT, Flight, etc.)") %>
 
   </div>
 
