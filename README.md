@@ -5,8 +5,11 @@
   This app was created with the hungry EMT and Paramedic in mind.  I figured, ya gotta eat sometime (and chances are you're not rich).  But you can always count on a good portion of the public to have our backs!  
 
 
+
 <h2>Basic Idea </h2>
   Users are able to log in with email and password.  They are able to add locations to the database with an actual street address or general area and that location will be saved to the shared google map.  Also the information located in the infowindow for each location contains the custom/user-generated data from the time of creation.
+
+  View Live example:  https://guarded-escarpment-80300.herokuapp.com/
 
 
   General Information:
