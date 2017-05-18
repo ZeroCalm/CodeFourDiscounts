@@ -22,8 +22,6 @@
      }
  }
 
-
-
  #map{
    width: 90%;
    height: 600px;
@@ -31,7 +29,11 @@
 
  .intro{
    text-align: center;
-   color: darkBlue;
+   background-image: url("./ambulance.jpg");
+   background-repeat:no-repeat;
+   background-position:right top;
+   color: white;
+   /*background-color: red;*/
  }
 
 body{

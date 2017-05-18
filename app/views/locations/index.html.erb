@@ -14,7 +14,7 @@
       <div class="item">
         <i class="map marker icon"></i>
         <div class="content">
-          <a class="header" style="font-family: 'Aclonica', sans-serif;"><%= "#{location.location_name}" %>   /     <%= "#{location.location_address}" %></a>
+          <a class="header" style="font-family: Roboto', sans-serif;"><%= "#{location.location_name}" %>   /     <%= "#{location.location_address}" %></a>
 
           <div class="description" style="color: darkBlue"><%= "#{location.location_description}" %></div>
         </div>
@@ -24,6 +24,7 @@
           <button type="button" class="btn btn-outline-danger"><%= link_to "Edit Location", edit_location_path("#{location.id}") %></button>
           <button type="button" class="btn btn-outline-danger"><%= link_to "New article", new_article_path("#{location.id}") %></button>
         </div>
+        <br />
       </ul>
       <br />
   </div>
