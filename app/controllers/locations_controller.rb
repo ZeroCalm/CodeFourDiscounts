@@ -20,7 +20,7 @@ class LocationsController < ApplicationController
 
     def show
       location_id = params[:id]
-      @location = Location.find_by_id(@location_id)
+      @location = Location.find_by_id(location_id)
     end
 
     def create
