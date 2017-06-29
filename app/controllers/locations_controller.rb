@@ -19,16 +19,16 @@ class LocationsController < ApplicationController
     end
 
     def show
-      @location_id = params[:id]
-      @location = Location.find_by_id(location_id)
+      location_id = params[:id]
+      @location = Location.find_by_id(@location_id)
     end
 
     def create
-    @location = Location.new(location_params)
-        if @location.save
-          redirect_to map_path
-        end
-    end
+      location = Location.new(location_params)
+       if location.save
+         redirect_to map_path
+       end
+   end
 
     def edit
       location_id = params[:id]
