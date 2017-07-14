@@ -3,15 +3,15 @@
     <div class="newLocation">
       <div class="col">
         <%= form_for @location, :html => { :class => "form-inline" } do |f| %>
-        <%= f.label :name %>:
+        <%= f.label :name %>
         <%= f.text_field :location_name %>
       </div><br />
       <div class="col">
-        <%= f.label "Description or Discount Offered" %>:
+        <%= f.label "Description or Discount Offered" %>
         <%= f.text_field :location_description %>
       </div><br />
       <div class="col">
-        <%= f.label :address %>:
+        <%= f.label :address %>
         <%= f.text_field :location_address %>
       </div><br />
       <%= f.submit "Create New Location"%>
