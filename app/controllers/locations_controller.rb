@@ -28,7 +28,7 @@ class LocationsController < ApplicationController
        if location.save
          redirect_to map_path
        end
-   end
+    end
 
     def edit
       location_id = params[:id]
@@ -47,9 +47,9 @@ class LocationsController < ApplicationController
     location = Location.find_by_id(location_id)
     location.destroy
     redirect_to locations_path
-  end
+    end
 
-  private
+private
 
   def location_params
     params.require(:location).permit(:location_name, :location_address, :location_description, :lat, :lng, :term)
