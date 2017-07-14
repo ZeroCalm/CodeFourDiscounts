@@ -33,6 +33,8 @@ gem 'rails_admin', '~> 1.1.1'
 gem 'devise'
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
+# Bcrypt Gem
+gem 'bcrypt', '~> 3.1.11'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
