@@ -1,21 +1,12 @@
-<div class="container">
-  <div class="row">
-    <div class="newLocation">
-      <div class="col">
-        <%= form_for @location, :html => { :class => "form-inline" } do |f| %>
-        <%= f.label :name %>
-        <%= f.text_field :location_name %>
-      </div><br />
-      <div class="col">
-        <%= f.label "Description or Discount Offered" %>
-        <%= f.text_field :location_description %>
-      </div><br />
-      <div class="col">
-        <%= f.label :address %>
-        <%= f.text_field :location_address %>
-      </div><br />
-      <%= f.submit "Create New Location"%>
-      <% end %>
-    </div>
-  </div>
-</div>
+<%= form_for @location, :html => { :class => "form-inline" } do |f| %>
+  <%= f.label :name %>:
+  <%= f.text_field :location_name %><br />
+
+  <%= f.label "Description or Discount Offered" %>:
+  <%= f.text_field :location_description %><br />
+
+  <%= f.label :address %>:
+  <%= f.text_field :location_address %><br />
+
+  <%= f.submit "Create New Location"%>
+  <% end %>
