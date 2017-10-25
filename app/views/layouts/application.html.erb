@@ -30,29 +30,27 @@
         <% end %>
       </span>
 
-      <div class="log">
+  <!-- Beggining Butons -->
         <% if current_user %>
-        <%= button_to "Logout", destroy_user_session_path, method: :delete %>
+          <%= button_to "Logout", destroy_user_session_path, method: :delete %>
         <% else %>
-        <%= button_to "Login", new_user_session_path %>
+          <%= button_to "Login", new_user_session_path %>
         <% end %>
-      </div>
-      <div class="mobileSlide">
-        <% if current_user %>
-        <%= link_to "My Articles", user_articles_path %></a>
-        <%= link_to "Edit My Info", edit_user_registration_path %>
-        <% end %>
-      </div>
 
-<!-- Following Menu -->
-<div class="ui large top fixed hidden menu">
-<div class="ui container">
+        <% if current_user %>
+          <%= link_to "My Articles", user_articles_path %></a>
+          <%= link_to "Edit My Info", edit_user_registration_path %>
+        <% end %>
+
+
       <% if current_user %>
         <%= link_to "Locations", locations_path, method: :get %>
         <%= link_to "Map", map_path %>
       <% end %>
+  <!-- End Buttons  -->
+
     </header>
-  </div>
+
   <%= yield %>
 </body>
 </html>
