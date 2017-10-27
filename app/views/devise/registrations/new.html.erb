@@ -9,6 +9,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :county %>
+    <%= f.select :county, options_for_select([['Solano','Solano'],['Contra Costa','Conta Costa'],['Alameda','Alameda']]) %>
+  </div>
+
+  <div class="field">
     <%= f.label :job_function %><br />
 
     <%= f.radio_button(:job_function, "EMT") %>
