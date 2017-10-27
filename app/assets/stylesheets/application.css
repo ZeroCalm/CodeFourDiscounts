@@ -29,7 +29,7 @@
 
  .intro{
    text-align: center;
-   background-image: url("./ambulance.jpg");
+   background-color: rgb(16 , 71, 213);
    background-repeat:no-repeat;
    background-position:right top;
    color: white;
