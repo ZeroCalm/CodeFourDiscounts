@@ -13,7 +13,6 @@
 
  *= require_tree .
  *= require_self
- @import "semantic-ui";
  */
 
  @media screen and (max-width: 565px) {
@@ -30,8 +29,6 @@
  .intro{
    text-align: center;
    background-color: rgb(16 , 71, 213);
-   background-repeat:no-repeat;
-   background-position:right top;
    color: white;
    /*background-color: red;*/
  }

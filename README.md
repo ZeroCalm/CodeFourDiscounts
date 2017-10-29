@@ -48,7 +48,6 @@ Gems Used:
 Devise <br>
 Geocoder <br>
 Rails_admin  '~> 1.1.1' <br>
-Semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git' <br>
 Omniauth-facebook'<br>
 
 
