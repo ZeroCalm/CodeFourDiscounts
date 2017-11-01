@@ -48,25 +48,28 @@ Gems Used:
 Devise <br>
 Geocoder <br>
 Rails_admin  '~> 1.1.1' <br>
-Semantic-ui-sass', git: 'https://github.com/doabit/semantic-ui-sass.git' <br>
 Omniauth-facebook'<br>
 
 
 
 *************************
-TODO:
 
-Delete admin attribute on creation.
+Future Plans:
 
-Current Location shows up on map
+1.  On creation of "New Location",
+      - redirect_to "Map" page
+      - "New Location" as center of maps
+      - Marker window open showing new data
 
-Directions are given from current location when requested by user on Map Page
+2.  Add Messaging Board for and links to:
+      - EMS related equipment reviews
+      - EMS related news articles
+      - Advice articles
+      - Job Postings
+      etc.
 
-User will have the ability sort Index
+3. Add Star Ratings for locations (Maybe??)
 
+4. User will have the ability sort "Locations Index", by food type.
 
-
-
-Challenges:
-
-My main challenge was accessing the User Views created by vise for styling.  Another day of reading or so and I"ll be good.
+5.  Driving Directions are given from current location when requested by user on "Map Page"
