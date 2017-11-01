@@ -2,7 +2,7 @@
   <div class="ui icon input">
     <%= form_tag(locations_path, method: :get) do %>
     <%= text_field_tag :term %>
-    <%= submit_tag 'Search for a Location', class: "results" %>
+    <%= submit_tag 'Search', class: "results" %>
     <% end %>
   </div>
   <br />
@@ -10,6 +10,7 @@
 
 
   <% @locations.each do |location| %>
+
 
 
           <a class="header" style="font-family: Roboto', sans-serif;"><%= "#{location.location_name}" %>   /     <%= "#{location.location_address}" %></a>
