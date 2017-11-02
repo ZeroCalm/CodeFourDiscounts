@@ -26,7 +26,7 @@
 
             google.maps.event.addListener(marker, 'click', (function(marker, i) {
               return function() {
-                infowindow.setContent(places[i].location_name + "   |   " + places[i].location_description  + "     |       " + places[i].location_address);
+                infowindow.setContent(places[i].location_name + "   <br />  " + places[i].location_description  + "    <br />     " + places[i].location_address);
                 infowindow.open(map, marker);
               }
             })(marker, i));

@@ -12,7 +12,7 @@ Location.destroy_all
 Article.destroy_all
 
 locations = [
-  {location_name:"Ike's Sandwiches", location_address: "2172 Shattuck Ave, Berkeley, CA", location_description: "25% of Sandwiches", lat: 37.869849, lng: -122.268379},
+  {location_name:"Ike's Sandwiches", location_address: "2172 Shattuck Ave, Berkeley, CA", location_description: "25% off Sandwiches", lat: 37.869849, lng: -122.268379},
   {location_name:"Chipotle", location_address: "8460 Edgewater Dr, Oakland, CA", location_description: "20% off Meals", lat: 37.737934, lng: -122.197464},
   {location_name:"Hawaiin BBQ", location_address: "25175 Sanata Clara St. #B Hayward, CA", location_description: "15% off Meals", lat: 37.648331, lng: -122.0899},
   {location_name:"Kingston 11", location_address: "2270 Telegraph Ave. Oakland", location_description: "10% off Special", lat: 37.81229, lng:  -122.26858}
