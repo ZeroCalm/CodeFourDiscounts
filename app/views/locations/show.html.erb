@@ -14,8 +14,11 @@
 
 
 
+
   <div class="text-center">
+      <% if current_user && current_user == 'article.user.user_name' %>
         <%= link_to "New Review", new_article_path(@location.id) %><br />
+      <% end %>
   </div>
 
 </div>
