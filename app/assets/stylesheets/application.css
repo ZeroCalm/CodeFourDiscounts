@@ -21,6 +21,26 @@
      }
  }
 
+ .title{
+   background-color: rgb(16 , 71, 213);
+   text-align: center;
+
+ }
+
+ .splash{
+   background-color: red;
+   text-align: center;
+   margin-bottom: auto;
+ }
+
+
+ .footer{
+   background-color: lightGray;
+   text-align: center;
+
+ }
+
+
  #map{
    width: 90%;
    height: 600px;
@@ -34,10 +54,6 @@
    color: white;
    /*background-color: red;*/
  }
-
-body{
-  background-color: black;
-}
 
 #new_article, #new_user{
   text-align: left;
@@ -81,10 +97,6 @@ body{
    text-align: center;
  }
 
- .header{
-   color: black;
-   font-size: 1.2em;
- }
 
  .indexpage{
    margin: auto;
