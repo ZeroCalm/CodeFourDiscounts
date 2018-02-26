@@ -22,10 +22,17 @@
  }
 
  .title{
-   background-color: rgb(16 , 71, 213);
    text-align: center;
 
  }
+
+.editPage{
+  margin-left: 5%;
+}
+
+.loginPage{
+  margin-left: 5%;
+}
 
  .splash{
    background-color: red;
@@ -33,10 +40,18 @@
    margin-bottom: auto;
  }
 
+ .articlePage{
+   margin-top: 5%;
+   margin-bottom: 15%;
+
+ }
+
+
 
  .footer{
    background-color: lightGray;
    text-align: center;
+   margin-top: 10%;
 
  }
 

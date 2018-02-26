@@ -16,7 +16,7 @@
 
 
           <a class="header" style="font-family: Roboto', sans-serif;"><%= "#{location.location_name}" %>   /     <%= "#{location.location_address}" %></a>
-          <div"><%= "#{location.location_description}" %></div>
+          <div class="description" style="color: darkBlue"><%= "#{location.location_description}" %></div>
         <div class="center">
           <button type="button" class="btn btn-outline-danger"><%= link_to "Reviews", location_path("#{location.id}") %></button>
           <button type="button" class="btn btn-outline-danger"><%= link_to "Edit Location", edit_location_path("#{location.id}") %></button>
